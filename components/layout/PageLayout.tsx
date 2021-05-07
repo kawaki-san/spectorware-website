@@ -6,7 +6,7 @@ function PageLayout({ children }: any) {
     <div>
       <CustomHead />
       <NavHeader />
-      <main>{children}</main>
+      <div className="container">{children}</div>
     </div>
   );
 }
