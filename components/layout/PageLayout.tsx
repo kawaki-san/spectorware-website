@@ -3,10 +3,10 @@ import CustomHead from "./CustomHead";
 
 function PageLayout({ children }: any) {
   return (
-    <div>
+    <div className=" overflow-x-hidden">
       <CustomHead />
       <NavHeader />
-      <div className="container">{children}</div>
+      <div>{children}</div>
     </div>
   );
 }
