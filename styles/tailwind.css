@@ -7,3 +7,13 @@
     @apply text-[#2b2b2b];
   }
 }
+
+@layer utilities {
+  .bg-pink {
+    background-color: #da294f;
+  }
+
+  .text-accent {
+    color: #da294f;
+  }
+}
