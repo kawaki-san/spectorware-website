@@ -1,6 +1,8 @@
-import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import SectionTitle from "../components/SectionTitle";
+import Slider from "../components/Slider";
+import styles from "../styles/Home.module.css";
+
 function index() {
   return (
     <div className="home">
@@ -77,9 +79,7 @@ function index() {
           </div>
         </div>
       </div>
-      <section
-        className={styles.dark_section + " text-white w-screen h-1/2 mt-8"}
-      >
+      <section className={styles.dark_section + "  w-screen h-1/2 mt-8"}>
         <div className="container p-6 text-center">
           <SectionTitle
             comment=" First things first..."
@@ -94,7 +94,7 @@ function index() {
                   id="hero-field"
                   name="hero-field"
                   placeholder="mynewdomain"
-                  className="w-full rounded font-medium text-gray-900 py-1 px-3 leading-8 duration-200 ease-in-out focus:border-pink-300 focus:ring focus:outline-none ring-pink-50 shadow-2xl"
+                  className="w-full rounded font-medium text-gray-900 py-1 px-3 leading-8 duration-200 ease-in-out focus:border-pink-500 focus:ring focus:outline-none ring-pink-100 shadow-2xl"
                 />
                 <button
                   type="submit"
@@ -125,6 +125,12 @@ function index() {
             to us.
           </p>
         </div>
+      </section>
+      <section>
+        <SectionTitle title="Why Spectorware?" comment="You were thinking..." />
+      </section>
+      <section className="sliders">
+        <Slider />
       </section>
     </div>
   );
