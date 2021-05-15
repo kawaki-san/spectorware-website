@@ -16,4 +16,8 @@
   .text-accent {
     color: #da294f;
   }
+
+  .pink-border {
+    border-color: #da294f;
+  }
 }

@@ -37,6 +37,15 @@
   padding-top: 1.5px;
 }
 
-.dark_section {
+.pink_section {
   /*background-color: rgba(19, 19, 20, 0.95);*/
+  background-color: #fad2db;
+}
+
+.darkbg {
+  background-color: #1d1d1f;
+}
+
+.banner {
+  /* background-color: #fafafa; */
 }

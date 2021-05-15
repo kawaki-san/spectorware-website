@@ -1,0 +1,8 @@
+.tld-container {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 1),
+    rgba(253, 230, 235, 0)
+  );
+  backdrop-filter: blur(16px);
+}

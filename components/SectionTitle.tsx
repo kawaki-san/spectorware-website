@@ -1,11 +1,12 @@
 interface Title {
   comment: string;
   title: string;
+  title_highlight?: string;
 }
 
 function SectionTitle(title: Title) {
   return (
-    <div>
+    <div className="pt-6">
       <h3 className="text-center uppercase font-semibold tracking-widest text-xs pb-4">
         {title.comment}
       </h3>
