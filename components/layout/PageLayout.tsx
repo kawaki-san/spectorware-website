@@ -1,3 +1,4 @@
+import Footer from "../footer/Footer";
 import NavHeader from "../NavHeader";
 import CustomHead from "./CustomHead";
 
@@ -7,6 +8,7 @@ function PageLayout({ children }: any) {
       <CustomHead />
       <NavHeader />
       <div>{children}</div>
+      <Footer />
     </div>
   );
 }

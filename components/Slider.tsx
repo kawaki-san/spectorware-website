@@ -14,10 +14,45 @@ function Slider() {
           <Rectangle />
           <Rectangle />
           <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
         </div>
       </div>
       <div className={slider["slider-container"]}>
         <div className={slider.slow}>
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
+          <Rectangle />
           <Rectangle />
           <Rectangle />
           <Rectangle />
