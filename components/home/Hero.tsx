@@ -1,5 +1,5 @@
-import styles from "../../styles/Home.module.css";
-import TLDContainer from "../TLDContainer";
+import styles from "../../styles/Hero.module.css";
+import TLDContainer from "./TLDContainer";
 
 function Hero() {
   return (

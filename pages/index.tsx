@@ -1,11 +1,9 @@
-import Link from "next/link";
 import DomainFinder from "../components/DomainFinder";
 import Hero from "../components/home/Hero";
 import SectionTitle from "../components/SectionTitle";
-import ServiceEntry from "../components/ServiceEntry";
+import ServiceEntry from "../components/home/ServiceEntry";
 import Slider from "../components/Slider";
 import SupportBanner from "../components/SupportBanner";
-import styles from "../styles/Home.module.css";
 
 function index() {
   return (

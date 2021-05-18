@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../styles/TLDContainer.module.css";
+import styles from "../../styles/TLDContainer.module.css";
 
 interface Tld {
   tld: string;
