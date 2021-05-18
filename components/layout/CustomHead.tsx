@@ -14,7 +14,7 @@ function CustomHead(meta: MetaInfo) {
       <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content={meta.page_description} />
-      <meta httpEquiv="X-UA-Compatible" content="ie=edge"/>
+      <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <link
         rel="shortcut icon"
         href="/7237492031/favicon.svg"
@@ -27,8 +27,9 @@ function CustomHead(meta: MetaInfo) {
 
 CustomHead.defaultProps = {
   page_title: "SpectorWare",
-  page_description: "Web Hosting",
-  page_keywords: "web hosting",
+  page_description: "Everything you need for your online journey.",
+  page_keywords:
+    "websites, hosting, domains, consultation, branding, app development, system development",
 };
 
 export default CustomHead;

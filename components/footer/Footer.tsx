@@ -12,12 +12,12 @@ function Footer() {
     text: "Home",
   };
   let sw2: Entry = {
-    path: "/",
-    text: "Hosting",
+    path: "/domains",
+    text: "Domains",
   };
   let sw3: Entry = {
     path: "/",
-    text: "Domains",
+    text: "Hosting",
   };
   let sw4: Entry = {
     path: "/",
@@ -69,7 +69,7 @@ function Footer() {
       </div>
       <hr />
       <div className="footer-text font-medium text-xs py-1">
-        Copyright &(c) {date} SpectorWare. All rights reserved.
+        Copyright &copy; {date} SpectorWare. All rights reserved.
       </div>
     </section>
   );

@@ -144,7 +144,7 @@ export default function Header() {
         }
       >
         <NavLink text="Home" path="/" />
-        <NavLink text="Domains" path="/" />
+        <NavLink text="Domains" path="/domains" />
         <NavLink text="Hosting" path="/" />
         {/* if you want to uncomment this, remember to change md: to lg: for responsiveness */}
         <div className="relative">

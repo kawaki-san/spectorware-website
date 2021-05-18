@@ -14,7 +14,7 @@ function TLDContainer(tld: Tld) {
       <div
         className={
           styles["tld-container"] +
-          " absolute w-3/12 sm:w-2/12 lg:w-2/12 2xl:w-48 rounded-md shadow-2xl flex flex-col items-center justify-center hover:cursor-pointer hover:border-pink-500 hover:ring hover:outline-none ring-pink-100 " +
+          " absolute w-3/12 sm:w-2/12 lg:w-2/12 2xl:w-48 rounded-md shadow-2xl flex flex-col items-center justify-center hover:cursor-pointer hover:border hover:border-gray-50 " +
           tld.styler
         }
       >

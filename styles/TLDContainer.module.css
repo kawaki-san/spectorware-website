@@ -4,5 +4,10 @@
     rgba(255, 255, 255, 1),
     rgba(253, 230, 235, 0)
   );
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(6px);
+}
+
+.tld-container:hover {
+  scale: 1.1;
+  transition: ease 0.7s;
 }

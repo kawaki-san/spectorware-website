@@ -7,7 +7,7 @@ function PageLayout({ children }: any) {
     <div className=" overflow-x-hidden">
       <CustomHead />
       <NavHeader />
-      <div>{children}</div>
+      <div className="pt-11">{children}</div>
       <Footer />
     </div>
   );
