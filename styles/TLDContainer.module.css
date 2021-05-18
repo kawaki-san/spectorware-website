@@ -6,8 +6,3 @@
   );
   backdrop-filter: blur(6px);
 }
-
-.tld-container:hover {
-  scale: 1.1;
-  transition: ease 0.7s;
-}

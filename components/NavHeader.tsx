@@ -145,7 +145,7 @@ export default function Header() {
       >
         <NavLink text="Home" path="/" />
         <NavLink text="Domains" path="/domains" />
-        <NavLink text="Hosting" path="/" />
+        <NavLink text="Hosting" path="/hosting" />
         {/* if you want to uncomment this, remember to change md: to lg: for responsiveness */}
         <div className="relative">
           <button

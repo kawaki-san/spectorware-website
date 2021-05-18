@@ -16,7 +16,7 @@ function Footer() {
     text: "Domains",
   };
   let sw3: Entry = {
-    path: "/",
+    path: "/hosting",
     text: "Hosting",
   };
   let sw4: Entry = {
