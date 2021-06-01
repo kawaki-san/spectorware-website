@@ -4,6 +4,7 @@ import styles from "../styles/Navbar.module.css";
 import NavLink from "./NavLink";
 export default function Header() {
   const [navbar, setNavbar] = useState(false);
+  const [mobileNav, showMobileNav] = useState(false);
   useEffect(function mount() {
     function scrolled() {
       if (window.scrollY >= 60) {
@@ -12,10 +13,19 @@ export default function Header() {
         setNavbar(false);
       }
     }
+    function resized() {
+      if (window.screenX <= 1024) {
+        showMobileNav(true);
+      } else {
+        showMobileNav(false);
+      }
+    }
     window.addEventListener("scroll", scrolled);
+    window.addEventListener("resize", resized);
 
     return function unmount() {
       window.removeEventListener("scroll", scrolled);
+      window.removeEventListener("resize", resized);
     };
   });
 
@@ -29,7 +39,7 @@ export default function Header() {
         " z-50 h-11 fixed flex flex-col w-screen lg:max-w-full px-4 mx-auto lg:items-center lg:justify-center lg:flex-row lg:px-8"
       }
     >
-      <div className="p-2 flex flex-row items-center justify-between">
+      <div className="flex flex-row items-center justify-between p-2">
         <Link href="/">
           <div className="flex items-center cursor-pointer">
             <svg
@@ -107,14 +117,14 @@ export default function Header() {
                 </linearGradient>
               </defs>
             </svg>
-            <a className="text-lg pr-8 font-semibold tracking-widest hover:text-white text-gray-100 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
+            <a className="pr-8 text-lg font-semibold tracking-widest text-gray-100 uppercase rounded-lg hover:text-white dark-mode:text-white focus:outline-none focus:shadow-outline">
               SpectorWare
             </a>
           </div>
         </Link>
 
         <button
-          className="lg:hidden rounded-lg focus:outline-none px-0 mx-0 focus:shadow-outline"
+          className="px-0 mx-0 rounded-lg lg:hidden focus:outline-none focus:shadow-outline"
           onClick={() => {
             setNavOpen(!isNavOpen);
           }}
@@ -143,21 +153,25 @@ export default function Header() {
             : "hidden lg:flex lg:flex-row lg:items-center lg:mb-2 "
         }
       >
-        <NavLink text="Home" path="/" />
-        <NavLink text="Domains" path="/domains" />
-        <NavLink text="Hosting" path="/hosting" />
+        <a onClick={() => setNavOpen(false)}>
+          <NavLink text="Home" path="/" />
+        </a>
+        <a onClick={() => setNavOpen(false)}>
+          <NavLink text="Domains" path="/domains" />
+        </a>
+        <a onClick={() => setNavOpen(false)}>
+          <NavLink text="Hosting" path="/hosting" />{" "}
+        </a>
         {/* if you want to uncomment this, remember to change md: to lg: for responsiveness */}
         <div className="relative">
           <button
-            className="pt-4 flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent  md:w-auto md:inline md:mt-0 md:ml-4    focus:outline-none focus:shadow-outline"
+            className="flex flex-row items-center w-full px-4 py-2 pt-4 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none focus:shadow-outline"
             onClick={() => {
               setDropdownOpen(!isDropdownOpen);
             }}
           >
             {" "}
-            <span className=" text-sm  text-gray-300 hover:text-white">
-              More
-            </span>
+            <span className="text-sm text-gray-300 hover:text-white">More</span>
             <svg
               fill="#f3f4f6"
               viewBox="0 0 20 20"
@@ -205,8 +219,13 @@ export default function Header() {
             </div>
           ) : null}
         </div>
-        <NavLink text="Client Area" path="/" />
-        <NavLink text="Contact" path="/" />
+        <a onClick={() => setNavOpen(false)}>
+          <NavLink text="Client Area" path="/" />{" "}
+        </a>
+
+        <a onClick={() => setNavOpen(false)}>
+          <NavLink text="Contact" path="/" />{" "}
+        </a>
       </nav>
     </header>
   );
