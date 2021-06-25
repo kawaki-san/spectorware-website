@@ -6,11 +6,11 @@ import Slider from "../components/Slider";
 import SupportBanner from "../components/SupportBanner";
 import { gql } from "@apollo/client";
 import client from "../api/apollo-client";
-function index({domains}:any) {
-  console.log(domains);
+
+function index({ domains }:TLDList) {
   return (
     <div className="home">
-      <Hero />
+      <Hero domains={domains} />
       <section>
         <div className="container text-center">
           <SectionTitle
@@ -63,5 +63,5 @@ export async function getServerSideProps() {
     props: {
       domains: data.tlds.slice(0, 4),
     },
- };
+  };
 }

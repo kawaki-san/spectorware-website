@@ -1,7 +1,7 @@
 import styles from "../../styles/Hero.module.css";
 import TLDContainer from "./TLDContainer";
 
-function Hero() {
+function Hero({ domains }: TLDList) {
   return (
     <section
       className={
@@ -29,22 +29,23 @@ function Hero() {
         >
           Are you <span>online?</span>
         </h1>
+
         <TLDContainer
           path="/"
-          tld=".com"
-          price={14}
+          tld={domains[0].name}
+          price={domains[0].cost}
           styler="right-0 mb-28 lg:right-24 xl:right-40 2xl:right-72 "
         />
         <TLDContainer
           path="/"
-          tld=".org"
-          price={15}
+          tld={domains[1].name}
+          price={domains[1].cost}
           styler="top-48 left-0 right-0 m-auto xs:top-36 sm:top-10 md:top-14 lg:top-12 xl:top-14"
         />
         <TLDContainer
           path="/"
-          tld=".net"
-          price={14}
+          tld={domains[2].name}
+          price={domains[2].cost}
           styler="left-0 mb-20 lg:left-24 xl:left-40 2xl:left-72 "
         />
 
