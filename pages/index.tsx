@@ -61,7 +61,7 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      domains: data.tlds.slice(0, 4),
+      domains: data.tlds.slice(0, 3),
     },
   };
 }

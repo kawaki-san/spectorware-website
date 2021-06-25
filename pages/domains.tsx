@@ -2,7 +2,9 @@ import Head from "next/head";
 import DomainFinder from "../components/DomainFinder";
 import TLDPrice from "../components/domains/TLDPrice";
 import SupportBanner from "../components/SupportBanner";
-function domains() {
+import { gql } from "@apollo/client";
+import client from "../api/apollo-client";
+function domains({ domains }: TLDList) {
   return (
     <div>
       <Head>
@@ -41,10 +43,11 @@ function domains() {
       <section className="pt-6">
         <div className="container px-5">
           <div className="flex flex-row flex-wrap justify-center pb-6">
-            <TLDPrice name="com" price={13.19} />
-            <TLDPrice name="org" price={15.59} />
-            <TLDPrice name="net" price={15.83} />
-            <TLDPrice name="info" price={17.27} />
+            {domains.map((tld) => (
+              /*substring function removes the first dot eg .com becomes com 
+               this is beacause the dot is already present and formatted differently in TLDPrice*/
+              <TLDPrice key={tld.name} price={tld.cost} name={tld.name.substring(1)}/>              
+            ))}
           </div>
         </div>
       </section>
@@ -54,3 +57,23 @@ function domains() {
 }
 
 export default domains;
+
+export async function getServerSideProps() {
+  const { data } = await client.query({
+    query: gql`
+        query tlds{
+          tlds{
+            name
+            cost
+            featured          
+          }
+        }
+    `,
+  });
+
+  return {
+    props: {
+      domains: data.tlds.slice(0, 8),
+    },
+  };
+}
