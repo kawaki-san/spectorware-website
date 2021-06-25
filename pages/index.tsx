@@ -4,8 +4,10 @@ import SectionTitle from "../components/SectionTitle";
 import ServiceEntry from "../components/home/ServiceEntry";
 import Slider from "../components/Slider";
 import SupportBanner from "../components/SupportBanner";
-
-function index() {
+import { gql } from "@apollo/client";
+import client from "../api/apollo-client";
+function index({domains}:any) {
+  console.log(domains);
   return (
     <div className="home">
       <Hero />
@@ -41,5 +43,25 @@ function index() {
     </div>
   );
 }
-
 export default index;
+
+export async function getServerSideProps() {
+  const { data } = await client.query({
+    query: gql`
+        query tlds{
+          tlds{
+            name
+            cost
+            featured
+            
+          }
+        }
+    `,
+  });
+
+  return {
+    props: {
+      domains: data.tlds.slice(0, 4),
+    },
+ };
+}
