@@ -7,10 +7,29 @@ import SupportBanner from "../components/SupportBanner";
 import { gql } from "@apollo/client";
 import client from "../api/apollo-client";
 
-function index({ domains }:TLDList) {
+function index({ domains }: TLDList) {
+  function shuffle(array: FeaturedTLD[]) {
+    var currentIndex = array.length,
+      randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+
+    return array;
+  }
   return (
     <div className="home">
-      <Hero domains={domains} />
+      <Hero domains={shuffle(domains)} />
       <section>
         <div className="container text-center">
           <SectionTitle
@@ -48,20 +67,19 @@ export default index;
 export async function getServerSideProps() {
   const { data } = await client.query({
     query: gql`
-        query tlds{
-          tlds{
-            name
-            cost
-            featured
-            
-          }
+      query tlds {
+        tlds {
+          name
+          cost
+          featured
         }
+      }
     `,
   });
 
   return {
     props: {
-      domains: data.tlds.slice(0, 3),
+      domains: data.tlds.slice(0, 6),
     },
   };
 }

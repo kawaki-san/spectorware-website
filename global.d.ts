@@ -19,6 +19,7 @@ interface HostingPackage {
   popular: boolean;
   storage: number;
   toggleCycle: boolean;
+  quote: string;
 }
 
 interface PackageList {

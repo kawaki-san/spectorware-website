@@ -64,9 +64,7 @@ function Package(plan: HostingPackage) {
               </svg>
             </button>
           </Link>
-          <p className="text-xs text-gray-500 mt-3">
-            Literally you probably haven't heard of them jean shorts.
-          </p>
+          <p className="text-xs text-gray-500 mt-3">{plan.quote}</p>
         </div>
       ) : (
         <div className="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden">
@@ -89,9 +87,7 @@ function Package(plan: HostingPackage) {
             return <Feature key={entry} title={entry} />;
           })}
           <PricingTableButton />
-          <p className="text-xs text-gray-500 mt-3">
-            Literally you probably haven't heard of them jean shorts.
-          </p>
+          <p className="text-xs text-gray-500 mt-3">{plan.quote}</p>
         </div>
       )}
     </div>

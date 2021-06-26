@@ -53,6 +53,7 @@ function hosting({ plan }: PackageList) {
               storage={pack.storage}
               name={pack.name}
               toggleCycle={annual}
+              quote={pack.quote}
             />
           ))}
         </div>
@@ -77,6 +78,7 @@ export async function getServerSideProps() {
           subdomains
           popular
           storage
+          quote
         }
       }
     `,
