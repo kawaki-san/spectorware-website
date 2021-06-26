@@ -1,45 +1,60 @@
-import { useState } from "react";
-import Feature from "../components/hosting/Feature";
 import SectionTitle from "../components/SectionTitle";
-import ToggleSwitch from "../components/ToggleSwitch";
-import Link from "next/link";
 import Package from "../components/hosting/Package";
-function hosting() {
-  let [checked, setChecked] = useState(false);
-  let vortex1 = "2GB storage";
-  let vortex2 = "1 Domain";
-  let vortex3 = "20 Databases";
-  let vortex4 = "15 Email Boxes";
+import { gql } from "@apollo/client";
+import client from "../api/apollo-client";
+import { useState } from "react";
+function hosting({ plan }: PackageList) {
+  const [annual, setAnnual] = useState(false);
 
   return (
     <div>
       <SectionTitle
         comment="No contracts, No surprise fees"
         title="Simple, transparent pricing"
-      ></SectionTitle>
-      <div className="container px-5 py-24 mx-auto">
-        <div className="rounded-lg bg-gray-50">
-          <div className="flex items-center justify-center w-full mb-12">
-            {/* <div className="list">
-              <ToggleSwitch
-                checked={checked}
-                onChange={setChecked}
-                id="annual-mon"
-                option_labels={["Monthly", "Yearly"]}
-              />
-
-              <Feature />
-              <Feature />
-              <Feature /> 
-            </div> */}
-            <Package
-              name="Vortex"
-              price_mon={1.2}
-              price_ann={12.2}
-              annual={true}
-              features={[vortex1]}
-            />
+      />
+      <div className="container px-5 py-20 mx-auto overflow-hidden">
+        <div className="flex flex-col text-center w-full mb-20">
+          <div className="flex mx-auto border-2 border-pink-500 rounded overflow-hidden mt-6">
+            <button
+              className={
+                annual
+                  ? "py-1 px-4 focus:outline-none"
+                  : "py-1 px-4 bg-pink text-white focus:outline-none"
+              }
+              onClick={() => setAnnual(false)}
+            >
+              Monthly
+            </button>
+            <button
+              className={
+                annual
+                  ? "py-1 px-4 focus:outline-none bg-pink text-white"
+                  : "py-1 px-4 focus:outline-none"
+              }
+              onClick={() => setAnnual(true)}
+            >
+              Annually
+            </button>
           </div>
+        </div>
+        <div className="flex flex-wrap -m-4 flex flex-row justify-center">
+          {plan.map((pack) => (
+            /*substring function removes the first dot eg .com becomes com 
+               this is beacause the dot is already present and formatted differently in TLDPrice*/
+            <Package
+              key={pack.name}
+              popular={pack.popular}
+              cost_ann={pack.cost_ann}
+              cost_mon={pack.cost_mon}
+              databases={pack.databases}
+              domains={pack.domains}
+              mailboxes={pack.mailboxes}
+              subdomains={pack.subdomains}
+              storage={pack.storage}
+              name={pack.name}
+              toggleCycle={annual}
+            />
+          ))}
         </div>
       </div>
     </div>
@@ -47,3 +62,29 @@ function hosting() {
 }
 
 export default hosting;
+
+export async function getServerSideProps() {
+  const { data } = await client.query({
+    query: gql`
+      query packages {
+        packages {
+          name
+          cost_mon
+          cost_ann
+          databases
+          domains
+          mailboxes
+          subdomains
+          popular
+          storage
+        }
+      }
+    `,
+  });
+
+  return {
+    props: {
+      plan: data.packages,
+    },
+  };
+}
