@@ -1,5 +1,6 @@
 import Head from "next/head";
-
+import { config, dom } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 interface MetaInfo {
   page_title?: string;
   page_description?: string;
@@ -21,6 +22,7 @@ function CustomHead(meta: MetaInfo) {
         type="image/x-icon"
       />
       <title>{meta.page_title}</title>
+      <style>{dom.css()}</style>
     </Head>
   );
 }

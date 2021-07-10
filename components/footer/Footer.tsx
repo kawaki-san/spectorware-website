@@ -28,12 +28,12 @@ function Footer() {
     text: "Contact",
   };
   let s1: Entry = {
-    path: "/",
-    text: "Product Support",
+    path: "https://spectorware.com/whmcs/index.php?rp=/knowledgebase",
+    text: "FAQs",
   };
   let s3: Entry = {
-    path: "/",
-    text: "FAQs",
+    path: "https://spectorware.com/whmcs/index.php?rp=/knowledgebase",
+    text: "Submit Ticket",
   };
   let s4: Entry = {
     path: "/",

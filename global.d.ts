@@ -1,3 +1,5 @@
+import { IconName } from "@fortawesome/fontawesome-svg-core";
+
 interface FeaturedTLD {
   name: string;
   cost: number;
@@ -22,6 +24,20 @@ interface HostingPackage {
   quote: string;
 }
 
+interface BehindTheScenesFeature{
+  app_name: string;
+  description:string;
+  feature_name:string;
+  app_logo?:string;
+  alt_logo?:string;
+}
+
 interface PackageList {
   plan: HostingPackage[];
+}
+
+interface AppList{
+  icon: IconName;
+  title: string;
+  description: string;
 }

@@ -1,10 +1,11 @@
 import Link from "next/link";
 import SectionTitle from "../../components/SectionTitle";
 import styles from "../../styles/HostingFeatures.module.css";
+import BackgroundFeatures from "./BackgroundFeatures";
 function Features() {
   return (
     <section className={styles.darkbg + " text-gray-50 body-font"}>
-      <div className=" container text-center text-gray-50">
+      <div className="container text-center text-gray-50">
         <SectionTitle comment="What do you get?" title="Application Suite" />
         <div className=" px-5 py-10 mx-auto flex flex-col">
           <div className="lg:w-4/6 mx-auto">
@@ -34,7 +35,7 @@ function Features() {
                 </div>
               </div>
               <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                <p className="leading-relaxed text-lg mb-4">
+                <p className="leading-relaxed text-lg mb-4 text-gray-200">
                   A point and click auto-installer. Just as easy as it's
                   supposed to be. Browse a collection of hundreds of web
                   applications ready to install on your domain. Uninstallation
@@ -64,6 +65,58 @@ function Features() {
           </div>
         </div>
       </div>
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 py-24 mx-auto">
+          <div className="flex flex-wrap w-full mb-20">
+            <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+              <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-100">
+                Behind the scenes
+              </h1>
+              <div className="h-1 w-20 bg-pink rounded"></div>
+            </div>
+            <p className="lg:w-1/2 w-full leading-relaxed text-gray-200">
+              Concerned about system bottlenecks? All our accounts are allocated
+              with 2CPUs and an additional 2GB of RAM. What does that mean?
+              Well, you should be able to host your site and have it perform as
+              fast as it can without any strain to the system.
+            </p>
+          </div>
+          <div className="flex flex-wrap -m-4">
+            <BackgroundFeatures
+              app_logo="https://dummyimage.com/720x400"
+              app_name="Next Generation of Solid State Drives"
+              feature_name="NVMe Storage"
+              alt_logo="content"
+              description="Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+          hexagon disrupt edison bulbche."
+            />
+            <BackgroundFeatures
+              app_logo="https://dummyimage.com/720x400"
+              feature_name="Secure your site with HTTPS"
+              app_name="Free SSL Certificates"
+              alt_logo="content"
+              description="Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+          hexagon disrupt edison bulbche."
+            />
+            <BackgroundFeatures
+              app_logo="https://dummyimage.com/720x400"
+              app_name="Your site is always available"
+              feature_name="DDoS Protection"
+              alt_logo="content"
+              description="Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+          hexagon disrupt edison bulbche."
+            />
+            <BackgroundFeatures
+              app_logo="https://dummyimage.com/720x400"
+              app_name="LiteSpeed and LSCache"
+              feature_name="Highly Performant Websites"
+              alt_logo="content"
+              description="Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+          hexagon disrupt edison bulbche."
+            />
+          </div>
+        </div>
+      </section>
     </section>
   );
 }
