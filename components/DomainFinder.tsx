@@ -5,7 +5,7 @@ function DomainFinder() {
     <section className=" w-screen h-1/2">
       <div className="container text-center px-5">
         <SectionTitle
-          comment="Like all things on the web..."
+          comment="Want to be a part of this goodness?"
           title="It starts with a domain name"
         />
         <p>Don't have one yet? No problem. We'll find one for you.</p>

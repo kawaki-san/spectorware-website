@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-    uri: "https://www.spectorware.com/api/",
+    uri: "https://api.spectorware.com/",
     cache: new InMemoryCache(),
 });
 

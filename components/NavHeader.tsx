@@ -163,7 +163,7 @@ export default function Header() {
           <NavLink text="Hosting" path="/hosting" />{" "}
         </a>
         {/* if you want to uncomment this, remember to change md: to lg: for responsiveness */}
-        <div className="relative">
+        {/* <div className="relative">
           <button
             className="flex flex-row items-center w-full px-4 py-2 pt-4 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent md:w-auto md:inline md:mt-0 md:ml-4 focus:outline-none focus:shadow-outline"
             onClick={() => {
@@ -218,7 +218,7 @@ export default function Header() {
               </div>
             </div>
           ) : null}
-        </div>
+        </div> */}
         <a onClick={() => setNavOpen(false)}>
           <NavLink text="Client Area" path="/" />{" "}
         </a>

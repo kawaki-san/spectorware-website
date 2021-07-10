@@ -3,11 +3,15 @@ import Package from "../components/hosting/Package";
 import { gql } from "@apollo/client";
 import client from "../api/apollo-client";
 import { useState } from "react";
+import styles from "../styles/SupportBanner.module.css";
+import Features from "../components/hosting/Features";
+
 function hosting({ plan }: PackageList) {
   const [annual, setAnnual] = useState(false);
 
   return (
     <div>
+      <section>
       <SectionTitle
         comment="No contracts, No surprise fees"
         title="Simple, transparent pricing"
@@ -37,7 +41,7 @@ function hosting({ plan }: PackageList) {
             </button>
           </div>
         </div>
-        <div className="flex flex-wrap -m-4 flex flex-row justify-center">
+        <div className="flex flex-wrap -m-4 flex-row justify-center">
           {plan.map((pack) => (
             /*substring function removes the first dot eg .com becomes com 
                this is beacause the dot is already present and formatted differently in TLDPrice*/
@@ -58,6 +62,8 @@ function hosting({ plan }: PackageList) {
           ))}
         </div>
       </div>
+      <Features/>
+      </section>
     </div>
   );
 }
