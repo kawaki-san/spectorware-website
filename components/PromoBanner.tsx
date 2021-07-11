@@ -17,8 +17,8 @@ function PromoBanner() {
           PROMO
         </span>
         <span className=" mr-2 text-left flex-auto">
-          Get 2 months free with 2MONF or 4MON50 (with annual cycles) for
-          hosting packages
+          Get 2 months free with 2MONF or 4MON50 (annual cycles) for hosting
+          packages
         </span>
         <Link href="/hosting">
           <svg
