@@ -5,7 +5,7 @@ library.add(fab);
 function AppItem(apps: AppList) {
   return (
     <div className="p-4 md:w-1/3 sm:mb-0 mb-6">
-      <div className="rounded-lg h-64 overflow-hidden text-9xl text-center hover:text-accent">
+      <div className="rounded-lg h-64 overflow-hidden md:text-7xl xl:text-9xl text-center hover:text-accent">
         <FontAwesomeIcon icon={["fab", apps.icon]} size="2x" />
       </div>
       <h2 className="text-xl font-medium title-font text-gray-900 mt-5">

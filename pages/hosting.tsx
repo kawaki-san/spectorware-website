@@ -20,9 +20,9 @@ function hosting({ plan }: PackageList) {
           comment="No contracts, No surprise fees"
           title="Simple, transparent pricing"
         />
-        <div className="container px-5 py-20 mx-auto overflow-hidden">
-          <div className="flex flex-col text-center w-full mb-20">
-            <div className="flex mx-auto border-2 border-pink-500 rounded overflow-hidden mt-6">
+        <div className="container px-5 py-10 mx-auto overflow-hidden">
+          <div className="flex flex-col text-center w-full mb-16">
+            <div className="flex mx-auto border-2 border-pink-500 rounded overflow-hidden mt-2">
               <button
                 className={
                   annual

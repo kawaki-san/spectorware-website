@@ -83,36 +83,32 @@ function Features() {
           </div>
           <div className="flex flex-wrap -m-4">
             <BackgroundFeatures
-              app_logo="https://dummyimage.com/720x400"
+              app_logo="/7237492031/fighter-jet-solid.svg"
               app_name="Next Generation of Solid State Drives"
               feature_name="NVMe Storage"
               alt_logo="content"
-              description="Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-          hexagon disrupt edison bulbche."
+              description="Load your sites anywhere from 2-7 times faster than SATA SSDs ensuring your site runs on unbeatable worldclass hardware."
             />
             <BackgroundFeatures
-              app_logo="https://dummyimage.com/720x400"
+              app_logo="/7237492031/ssl.svg"
               feature_name="Secure your site with HTTPS"
               app_name="Free SSL Certificates"
               alt_logo="content"
-              description="Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-          hexagon disrupt edison bulbche."
+              description="Legitimise your site and the information your visitors share with it using our free SSL certificates available with each package."
             />
             <BackgroundFeatures
-              app_logo="https://dummyimage.com/720x400"
+              app_logo="/7237492031/shield-alt-solid.svg"
               app_name="Your site is always available"
-              feature_name="DDoS Protection"
+              feature_name="DDoS Mitigation"
               alt_logo="content"
-              description="Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-          hexagon disrupt edison bulbche."
+              description="Rest easy knowing that our world class, cloud-based protection services are always working to keep your site accessible."
             />
             <BackgroundFeatures
-              app_logo="https://dummyimage.com/720x400"
+              app_logo="/7237492031/litespeed-logo-gray_whitebg.svg"
               app_name="LiteSpeed and LSCache"
               feature_name="Highly Performant Websites"
               alt_logo="content"
-              description="Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-          hexagon disrupt edison bulbche."
+              description="An optimisation plugin that caches the content your website serves which significantly improves the loading times."
             />
           </div>
         </div>

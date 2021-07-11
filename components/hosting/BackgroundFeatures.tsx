@@ -4,7 +4,7 @@ function BackgroundFeatures(features: BehindTheScenesFeature) {
     <div className="xl:w-1/4 md:w-1/2 p-4">
       <div className={styles.lightdarkbg + " p-6 rounded-lg"}>
         <img
-          className="h-40 rounded w-full object-cover object-center mb-6"
+          className="h-40 rounded w-full object-contain object-center mb-6"
           src={features.app_logo}
           alt={features.alt_logo}
         />
