@@ -1,0 +1,9 @@
+.button {
+  background: linear-gradient(
+    to bottom right,
+    rgba(158, 0, 255, 0.8),
+    rgba(218, 41, 79, 0.8)
+  );
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}

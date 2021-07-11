@@ -6,6 +6,7 @@ import Slider from "../components/Slider";
 import SupportBanner from "../components/SupportBanner";
 import { gql } from "@apollo/client";
 import client from "../api/apollo-client";
+import PromoBanner from "../components/PromoBanner";
 
 function index({ domains }: TLDList) {
   function shuffle(array: FeaturedTLD[]) {
@@ -29,6 +30,7 @@ function index({ domains }: TLDList) {
   }
   return (
     <div className="home">
+      <PromoBanner />
       <Hero domains={shuffle(domains)} />
       <section>
         <div className="container text-center">

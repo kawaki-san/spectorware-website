@@ -7,6 +7,7 @@ import Features from "../components/hosting/Features";
 import Head from "next/head";
 import SupportedApps from "../components/hosting/SupportedApps";
 import DeveloperTools from "../components/hosting/DeveloperTools";
+import PromoBanner from "../components/PromoBanner";
 
 function hosting({ plan }: PackageList) {
   const [annual, setAnnual] = useState(false);
@@ -67,6 +68,7 @@ function hosting({ plan }: PackageList) {
             ))}
           </div>
         </div>
+        <PromoBanner />
         <Features />
         <SupportedApps />
         <DeveloperTools />

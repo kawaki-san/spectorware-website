@@ -160,7 +160,7 @@ export default function Header() {
           <NavLink text="Domains" path="/domains" />
         </a>
         <a onClick={() => setNavOpen(false)}>
-          <NavLink text="Hosting" path="/hosting" />{" "}
+          <NavLink text="Hosting" path="/hosting" />
         </a>
         {/* if you want to uncomment this, remember to change md: to lg: for responsiveness */}
         {/* <div className="relative">
@@ -220,11 +220,11 @@ export default function Header() {
           ) : null}
         </div> */}
         <a onClick={() => setNavOpen(false)}>
-          <NavLink text="Client Area" path="/" />{" "}
+          <NavLink text="Client Area" path="/whmcs" />
         </a>
 
         <a onClick={() => setNavOpen(false)}>
-          <NavLink text="Contact" path="/" />{" "}
+          <NavLink text="Contact" path="/" />
         </a>
       </nav>
     </header>

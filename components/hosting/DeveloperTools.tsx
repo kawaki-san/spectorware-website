@@ -6,7 +6,7 @@ function DeveloperTools() {
       <div className="container px-5 mx-auto">
         <div className="text-center mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">
-            Extra Services and Server Information
+            Key Services and Server Information
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
             Some highlights of the free services you get when you pick us as

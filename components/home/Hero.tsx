@@ -1,5 +1,5 @@
-import styles from "../../styles/Hero.module.css";
 import TLDContainer from "./TLDContainer";
+import styles from "../../styles/Hero.module.css";
 
 function Hero({ domains }: TLDList) {
   return (
