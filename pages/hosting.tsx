@@ -6,6 +6,7 @@ import { useState } from "react";
 import Features from "../components/hosting/Features";
 import Head from "next/head";
 import SupportedApps from "../components/hosting/SupportedApps";
+import DeveloperTools from "../components/hosting/DeveloperTools";
 
 function hosting({ plan }: PackageList) {
   const [annual, setAnnual] = useState(false);
@@ -68,6 +69,7 @@ function hosting({ plan }: PackageList) {
         </div>
         <Features />
         <SupportedApps />
+        <DeveloperTools />
       </section>
     </div>
   );

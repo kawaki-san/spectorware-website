@@ -29,7 +29,7 @@ function SupportedApps() {
           <AppItem
             title="NodeJS"
             icon="node"
-            description="Got a React or Vue application? An API with Express backend? No worries. Our setup  Connect it to your SQL Database and keep your data centralised in your account."
+            description="Got a React or Vue application? An API with an Express backend? No worries. Use your remote SQL Database and keep your data centralised in your account."
           />
           <AppItem
             title="Python"

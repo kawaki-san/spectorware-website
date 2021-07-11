@@ -87,7 +87,7 @@ function Features() {
               app_name="Next Generation of Solid State Drives"
               feature_name="NVMe Storage"
               alt_logo="content"
-              description="Load your sites anywhere from 2-7 times faster than SATA SSDs ensuring your site runs on unbeatable worldclass hardware."
+              description="With this technology, your site will perform anywhere from 2-7 times faster than when it's running on SATA SSDs."
             />
             <BackgroundFeatures
               app_logo="/7237492031/ssl.svg"
