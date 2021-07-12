@@ -2,6 +2,7 @@ import BillingCycle from "./BillingCycle";
 import Feature from "./Feature";
 import PricingTableButton from "./PricingTableButton";
 import Link from "next/link";
+import { HostingPackage } from "../../global";
 function Package(plan: HostingPackage) {
   const popular_plan = "vortex";
   var databases = "";
@@ -16,6 +17,7 @@ function Package(plan: HostingPackage) {
   } else {
     mailboxes = plan.mailboxes + " mailboxes";
   }
+  console.log("Link is: " + plan.link);
   var features = [
     plan.storage + "GB storage",
     databases,
@@ -48,22 +50,7 @@ function Package(plan: HostingPackage) {
           {features.map((entry) => {
             return <Feature key={entry} title={entry} />;
           })}
-          <Link href="/">
-            <button className="flex items-center mt-auto text-white bg-pink border-0 py-2 px-4 w-full focus:outline-none hover:bg-pink rounded">
-              Checkout
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                className="w-4 h-4 ml-auto"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </button>
-          </Link>
+          <PricingTableButton link={plan.link} />
           <p className="text-xs text-gray-500 mt-3">{plan.quote}</p>
         </div>
       ) : (
@@ -86,7 +73,7 @@ function Package(plan: HostingPackage) {
           {features.map((entry) => {
             return <Feature key={entry} title={entry} />;
           })}
-          <PricingTableButton />
+          <PricingTableButton link={plan.link} />
           <p className="text-xs text-gray-500 mt-3">{plan.quote}</p>
         </div>
       )}

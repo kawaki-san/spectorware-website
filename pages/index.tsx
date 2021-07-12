@@ -7,6 +7,8 @@ import SupportBanner from "../components/SupportBanner";
 import { gql } from "@apollo/client";
 import client from "../api/apollo-client";
 import PromoBanner from "../components/PromoBanner";
+import FAQAccordion from "../components/home/FAQAccordion";
+import HomeCTA from "../components/home/HomeCTA";
 
 function index({ domains }: TLDList) {
   function shuffle(array: FeaturedTLD[]) {
@@ -35,23 +37,21 @@ function index({ domains }: TLDList) {
       <section>
         <div className="container text-center">
           <SectionTitle
-            comment="Always there for you"
-            title="There is no limit"
+            comment="The Best of all worlds"
+            title="We've got you covered"
           />
           <div className="w-full flex flex-col  justify-center flex-wrap pt-2 text-left px-5 sm:flex-row">
             <ServiceEntry
-              title="Create your own"
-              body="Easily setup your website on our platform with our wide range of hosting
-            and domain options. Whether you want a business email, e-commerce shop
-            or something in-between. We've got you covered."
+              title="Easy Setup"
+              body="Get your website up and running in a few clicks. Pick from any of our hosting and domain options. Use our free website builder to build your site without even a single line of code."
             />
             <ServiceEntry
-              title="Let us help"
-              body="Is your schedule too full? Do you simply wish to focus on the non-technical aspects of your business? Allow any of our technical consultants to set things up for you."
+              title="Secure WordPress Hosting"
+              body="Take advantage of our automatic virus scans and free SSL certificates and protect the data you serve or the data your visitors share with your site from interception."
             />
             <ServiceEntry
-              title="Peace of mind"
-              body="Keep your mind at ease knowing that your digital presence is fully secured and regularly backed up. Free SSL certificates and checks by our experts will keep your data safe from hackers."
+              title="Flexible Backups"
+              body="Your account is automatically backed up daily for up to 30 days. However, you are also at the liberty of scheduling your own backup whenever you'd like."
             />
           </div>
         </div>
@@ -59,8 +59,11 @@ function index({ domains }: TLDList) {
       <section className="sliders mt-4 mb-4 w-screen">
         <Slider />
       </section>
-      <DomainFinder />
+      <HomeCTA />
       <SupportBanner />
+      <DomainFinder />
+
+      <FAQAccordion />
     </div>
   );
 }

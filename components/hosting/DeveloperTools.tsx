@@ -6,11 +6,11 @@ function DeveloperTools() {
       <div className="container px-5 mx-auto">
         <div className="text-center mb-20">
           <h1 className="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">
-            Key Services and Server Information
+            Features and Server Information
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-            Some highlights of the free services you get when you pick us as
-            your cloud hosting provider. Available in all our plans:
+            A sneak-peak look of how are servers are running. Available in all
+            our plans:
           </p>
         </div>
         <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">

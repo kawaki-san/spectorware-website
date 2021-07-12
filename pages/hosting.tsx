@@ -8,6 +8,7 @@ import Head from "next/head";
 import SupportedApps from "../components/hosting/SupportedApps";
 import DeveloperTools from "../components/hosting/DeveloperTools";
 import PromoBanner from "../components/PromoBanner";
+import { HostingPackage } from "../global";
 
 function hosting({ plan }: PackageList) {
   const [annual, setAnnual] = useState(false);
@@ -64,6 +65,7 @@ function hosting({ plan }: PackageList) {
                 name={pack.name}
                 toggleCycle={annual}
                 quote={pack.quote}
+                link={pack.link}
               />
             ))}
           </div>
@@ -94,6 +96,7 @@ export async function getServerSideProps() {
           popular
           storage
           quote
+          link
         }
       }
     `,

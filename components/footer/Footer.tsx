@@ -20,11 +20,11 @@ function Footer() {
     text: "Website Hosting",
   };
   let sw4: Entry = {
-    path: "/",
+    path: "https://spectorware.com/whmcs/",
     text: "Client Area",
   };
   let sw5: Entry = {
-    path: "/",
+    path: "https://spectorware.com/whmcs/contact.php",
     text: "Contact",
   };
   let s1: Entry = {
@@ -32,11 +32,11 @@ function Footer() {
     text: "FAQs",
   };
   let s3: Entry = {
-    path: "https://spectorware.com/whmcs/index.php?rp=/knowledgebase",
+    path: "https://spectorware.com/whmcs/contact.php",
     text: "Submit Ticket",
   };
   let s4: Entry = {
-    path: "/",
+    path: "https://spectorware.com/whmcs/contact.php",
     text: "Report Abuse",
   };
   return (

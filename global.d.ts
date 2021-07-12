@@ -22,22 +22,28 @@ interface HostingPackage {
   storage: number;
   toggleCycle: boolean;
   quote: string;
+  link: string;
 }
 
-interface BehindTheScenesFeature{
+interface BehindTheScenesFeature {
   app_name: string;
-  description:string;
-  feature_name:string;
-  app_logo?:string;
-  alt_logo?:string;
+  description: string;
+  feature_name: string;
+  app_logo?: string;
+  alt_logo?: string;
 }
 
 interface PackageList {
   plan: HostingPackage[];
 }
 
-interface AppList{
+interface AppList {
   icon: IconName;
   title: string;
   description: string;
+}
+
+interface AccordionEntry {
+  question: string;
+  answer: any;
 }

@@ -1,8 +1,12 @@
 import Link from "next/link";
 
-function PricingTableButton() {
+interface URLLink {
+  link: string;
+}
+
+function PricingTableButton(link: URLLink) {
   return (
-    <Link href="/">
+    <Link href={link.link}>
       <a className="flex items-center mt-auto text-white bg-pink border-0 py-2 px-4 w-full focus:outline-none hover:bg-pink rounded">
         Checkout
         <svg

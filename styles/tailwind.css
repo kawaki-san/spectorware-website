@@ -10,7 +10,7 @@
 
 @layer utilities {
   .bg-pink {
-    background-color: #da294f;
+    background-color: #da294f !important;
   }
 
   .text-accent {
