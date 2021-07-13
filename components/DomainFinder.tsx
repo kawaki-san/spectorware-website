@@ -55,7 +55,9 @@ function DomainFinder() {
         <p className="pb-4">
           Got one? You might be looking to{" "}
           <span className="text-accent font-medium underline">
-            <Link href="/">transfer</Link>
+            <Link href="https://spectorware.com/whmcs/cart.php?a=add&domain=transfer&query=">
+              transfer
+            </Link>
           </span>{" "}
           to us.
         </p>

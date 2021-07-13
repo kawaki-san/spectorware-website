@@ -4,14 +4,15 @@ import TLDPrice from "../components/domains/TLDPrice";
 import SupportBanner from "../components/SupportBanner";
 import { gql } from "@apollo/client";
 import client from "../api/apollo-client";
+import { TLDList } from "../global";
 function domains({ domains }: TLDList) {
   return (
     <div>
       <Head>
-        <title>Domains</title>
+        <title>Find a Domain | SpectorWare</title>
         <meta
           name="description"
-          content="Well priced domains for purchase renewal or transfer with no hidden costs. Get an easy to use domain management system and create as many subdomains as you need as per your hosting package and needs."
+          content="Well priced domains for purchase, renewal or transfer with no hidden costs. Get an easy to use domain management system and create as many subdomains as you want as per your hosting package."
         />
         <meta
           name="keywords"
@@ -46,7 +47,11 @@ function domains({ domains }: TLDList) {
             {domains.map((tld) => (
               /*substring function removes the first dot eg .com becomes com 
                this is beacause the dot is already present and formatted differently in TLDPrice*/
-              <TLDPrice key={tld.name} price={tld.cost} name={tld.name.substring(1)}/>              
+              <TLDPrice
+                key={tld.name}
+                price={tld.cost}
+                name={tld.name.substring(1)}
+              />
             ))}
           </div>
         </div>
@@ -61,13 +66,13 @@ export default domains;
 export async function getServerSideProps() {
   const { data } = await client.query({
     query: gql`
-        query tlds{
-          tlds{
-            name
-            cost
-            featured          
-          }
+      query tlds {
+        tlds {
+          name
+          cost
+          featured
         }
+      }
     `,
   });
 

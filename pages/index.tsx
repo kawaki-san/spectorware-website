@@ -9,6 +9,7 @@ import client from "../api/apollo-client";
 import PromoBanner from "../components/PromoBanner";
 import FAQAccordion from "../components/home/FAQAccordion";
 import HomeCTA from "../components/home/HomeCTA";
+import { FeaturedTLD, TLDList } from "../global";
 
 function index({ domains }: TLDList) {
   function shuffle(array: FeaturedTLD[]) {

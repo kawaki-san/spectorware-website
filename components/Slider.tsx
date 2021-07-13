@@ -17,7 +17,7 @@ function Slider() {
           <Rectangle icon="drupal" />
           <Rectangle icon="joomla" />
           <Rectangle icon="wordpress" />
-          <MariaDBIcon icon="jetBackup" />
+          <MariaDBIcon />
           <Rectangle icon="vuejs" />
           <Rectangle icon="python" />
           <LiteSpeedIcon icon="cpanel" />

@@ -19,7 +19,7 @@ function FooterColumn(col: Column) {
       <ul className="footer-text text-xs font-medium">
         {col.entry.map((entry: Entry) => {
           return (
-            <FooterEntry key={entry.path} path={entry.path} text={entry.text} />
+            <FooterEntry key={entry.text} path={entry.path} text={entry.text} />
           );
         })}
       </ul>

@@ -1,3 +1,4 @@
+import { BehindTheScenesFeature } from "../../global";
 import styles from "../../styles/HostingFeatures.module.css";
 function BackgroundFeatures(features: BehindTheScenesFeature) {
   return (

@@ -28,10 +28,11 @@ function CustomHead(meta: MetaInfo) {
 }
 
 CustomHead.defaultProps = {
-  page_title: "SpectorWare",
-  page_description: "Everything you need for your online journey.",
+  page_title: "Web Hosting | SpectorWare",
+  page_description:
+    "Get your website live in just a few clicks. Need a domain name? Fast web hosting? An intuitive site builder? SpectorWare has got you covered.",
   page_keywords:
-    "websites, hosting, domains, consultation, branding, app development, system development",
+    "websites, hosting, domains, sitebuilder, free sitebuilder, cheap domains",
 };
 
 export default CustomHead;

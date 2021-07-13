@@ -84,10 +84,10 @@ function LiteSpeedIcon(apps: Icon) {
               <path
                 fill="none"
                 stroke="#232020"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-miterlimit="10"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeMiterlimit="10"
                 d="
 				M301.284,471.98c-2.016-0.135-4.026-1.457-4.905-3.229c-1.745-3.548,0.811-6.843,2.041-8.427l93.291-118.411
 				c0.856-1.12,0.945-3.409,0.182-4.556l-52.076-74.903c-3.898-5.536-2.692-13.381,2.701-17.501l150.065-115.198

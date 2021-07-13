@@ -8,7 +8,7 @@ import Head from "next/head";
 import SupportedApps from "../components/hosting/SupportedApps";
 import DeveloperTools from "../components/hosting/DeveloperTools";
 import PromoBanner from "../components/PromoBanner";
-import { HostingPackage } from "../global";
+import { HostingPackage, PackageList } from "../global";
 
 function hosting({ plan }: PackageList) {
   const [annual, setAnnual] = useState(false);
@@ -16,7 +16,15 @@ function hosting({ plan }: PackageList) {
   return (
     <div>
       <Head>
-        <title>Hosting Packages and Features</title>
+        <title>Hosting Plans | SpectorWare</title>
+        <meta
+          name="description"
+          content="Web Hosting | WordPress Hosting | Business Hosting with free daily backups for up to 30 days."
+        />
+        <meta
+          name="keywords"
+          content="cheap domains, transfer domain, register domain, renew domain"
+        />
       </Head>
       <section>
         <SectionTitle

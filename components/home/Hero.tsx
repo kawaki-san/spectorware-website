@@ -1,5 +1,6 @@
 import TLDContainer from "./TLDContainer";
 import styles from "../../styles/Hero.module.css";
+import { TLDList } from "../../global";
 
 function Hero({ domains }: TLDList) {
   return (

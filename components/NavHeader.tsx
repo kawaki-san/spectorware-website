@@ -224,7 +224,10 @@ export default function Header() {
         </a>
 
         <a onClick={() => setNavOpen(false)}>
-          <NavLink text="Contact" path="/" />
+          <NavLink
+            text="Contact"
+            path="https://spectorware.com/whmcs/contact.php"
+          />
         </a>
       </nav>
     </header>

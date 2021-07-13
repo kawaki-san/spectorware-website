@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://spectorware.com
+
+# Sitemaps
+Sitemap: https://spectorware.com/sitemap.xml
