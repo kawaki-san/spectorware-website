@@ -35,7 +35,7 @@ function index({ domains }: TLDList) {
     <div className="home">
       <PromoBanner />
       <Hero domains={shuffle(domains)} />
-      <section>
+      <section className="mt-4">
         <div className="container text-center">
           <SectionTitle
             comment="The Best of all worlds"

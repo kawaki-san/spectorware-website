@@ -31,7 +31,7 @@ export default function Accrdion(entries: AccordionEntries) {
             </AccordionItem>
           );
         })}
-        <div className="pt-8 text-base">
+        <div className="pt-8 text-base text-center">
           Looking for something a little different? Checkout our{" "}
           <Link href="https://spectorware.com/whmcs/index.php?rp=/knowledgebase">
             <a className="text-accent hover:underline">knowledgebase.</a>

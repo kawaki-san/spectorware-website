@@ -17,7 +17,6 @@ function Package(plan: HostingPackage) {
   } else {
     mailboxes = plan.mailboxes + " mailboxes";
   }
-  console.log("Link is: " + plan.link);
   var features = [
     plan.storage + "GB storage",
     databases,

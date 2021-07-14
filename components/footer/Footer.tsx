@@ -41,10 +41,12 @@ function Footer() {
   };
   return (
     <section className="px-5 bg-gray-50 pt-6">
-      <div className="container flex flex-row flex-wrap justify-center pb-6">
-        <FooterColumn heading="Spectorware" entry={[sw1, sw4, sw5]} />
-        <FooterColumn heading="Products" entry={[m1, m2]} />
-        <FooterColumn heading="Support" entry={[s1, s3, s4]} />
+      <div className="container ">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center pb-6">
+          <FooterColumn heading="Spectorware" entry={[sw1, sw4, sw5]} />
+          <FooterColumn heading="Products" entry={[m1, m2]} />
+          <FooterColumn heading="Support" entry={[s1, s3, s4]} />
+        </div>
       </div>
       <hr />
       <div className="footer-text font-medium text-xs py-1">

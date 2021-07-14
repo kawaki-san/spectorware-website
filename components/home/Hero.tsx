@@ -1,3 +1,4 @@
+import Link from "next/link";
 import TLDContainer from "./TLDContainer";
 import styles from "../../styles/Hero.module.css";
 import { TLDList } from "../../global";
@@ -61,39 +62,41 @@ function Hero({ domains }: TLDList) {
             <span className="font-black">journey</span>.
           </h2>
 
-          <div
-            className={
-              styles.button +
-              " px-4 cursor-pointer rounded-lg border-transparent inline-flex hover:border-gray-100 border-2 shadow-sm"
-            }
-          >
-            <svg
-              className="h-4 mt-1"
-              width="32"
-              height="27"
-              viewBox="0 0 32 27"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          <Link href="/whmcs">
+            <div
+              className={
+                styles.button +
+                " px-4 cursor-pointer rounded-lg border-transparent inline-flex hover:border-gray-100 border-2 shadow-sm"
+              }
             >
-              <g clipPath="url(#clip0)">
-                <path
-                  d="M25.9596 7.92565H20.9055V4.62159C20.9055 2.18871 18.6425 0.216187 15.8514 0.216187C13.0603 0.216187 10.7974 2.18871 10.7974 4.62159V7.92565H5.74334L3.21631 26.6486H28.4866L25.9596 7.92565ZM12.0609 4.62159C12.0609 2.79996 13.7616 1.31754 15.8514 1.31754C17.9413 1.31754 19.642 2.79996 19.642 4.62159V7.92565H12.0609V4.62159ZM6.05795 24.4459L7.98986 10.1283H10.7974V11.7804C10.7974 12.0843 11.0804 12.3311 11.4291 12.3311C11.7779 12.3311 12.0609 12.0843 12.0609 11.7804V10.1283H19.642V11.7804C19.642 12.0843 19.925 12.3311 20.2737 12.3311C20.6225 12.3311 20.9055 12.0843 20.9055 11.7804V10.1283H23.713L25.6449 24.4459H6.05795Z"
-                  fill="#F7F7FF"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0">
-                  <rect
-                    width="30.3243"
-                    height="26.4324"
-                    fill="white"
-                    transform="translate(0.689453 0.216187)"
+              <svg
+                className="h-4 mt-1"
+                width="32"
+                height="27"
+                viewBox="0 0 32 27"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clipPath="url(#clip0)">
+                  <path
+                    d="M25.9596 7.92565H20.9055V4.62159C20.9055 2.18871 18.6425 0.216187 15.8514 0.216187C13.0603 0.216187 10.7974 2.18871 10.7974 4.62159V7.92565H5.74334L3.21631 26.6486H28.4866L25.9596 7.92565ZM12.0609 4.62159C12.0609 2.79996 13.7616 1.31754 15.8514 1.31754C17.9413 1.31754 19.642 2.79996 19.642 4.62159V7.92565H12.0609V4.62159ZM6.05795 24.4459L7.98986 10.1283H10.7974V11.7804C10.7974 12.0843 11.0804 12.3311 11.4291 12.3311C11.7779 12.3311 12.0609 12.0843 12.0609 11.7804V10.1283H19.642V11.7804C19.642 12.0843 19.925 12.3311 20.2737 12.3311C20.6225 12.3311 20.9055 12.0843 20.9055 11.7804V10.1283H23.713L25.6449 24.4459H6.05795Z"
+                    fill="#F7F7FF"
                   />
-                </clipPath>
-              </defs>
-            </svg>
-            <p className="font-medium text-white text-sm">Shop Now</p>
-          </div>
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <rect
+                      width="30.3243"
+                      height="26.4324"
+                      fill="white"
+                      transform="translate(0.689453 0.216187)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+              <p className="font-medium text-white text-sm">Shop Now</p>
+            </div>
+          </Link>
         </div>
       </div>
     </section>
